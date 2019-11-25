@@ -7,15 +7,31 @@
     <title>俄罗斯方块</title>
     <style>
         #root {
-            width: 400px;
-            height: 800px;
-            background-color: #000;
+            display: flex;
+            justify-content: center;
             margin: 0 auto;
+        }
+        #panel {
+            width: 300px;
+            height: 900px;
+            position: relative;
+            background-color: #000;
+        }
+        #tip {
+            padding-left: 100px;
+        }
+        #next {
+            width: 120px;
             position: relative;
         }
     </style>
 </head>
 <body>
-    <div id="root"></div>
+    <div id="root">
+        <div id="panel"></div>
+        <div id="tip">
+            <div id="next"></div>
+        </div>
+    </div>
 </body>
 </html>

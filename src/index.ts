@@ -2,11 +2,25 @@ import $ from 'jquery'
 import { Square } from './core/Square'
 import { SquarePageViewer } from './core/viewer/SquarePageViewer'
 import { SquareGroup } from './core/SquareGroup'
-import { creatShape } from './core/Teris'
+import { createTetris } from './core/Tetris'
+import { TetrisRule } from './core/TetrisRule'
+import { MoveDirdection } from './core/types'
+import { Game } from './core/Game'
+import { PageGameViewer } from './core/viewer/PageGameViewer'
 
-const squareGroup: SquareGroup = creatShape({x: 3, y: 3})
-squareGroup.squares.forEach(ele => {
-    ele.viewer = new SquarePageViewer(ele, $("#root"))
-})
+const g: Game = new Game(new PageGameViewer())
 
-console.log(squareGroup)
+g.start()
+// const squareGroup: SquareGroup = createTetris({x: 3, y: 3})
+// squareGroup.squares.forEach(ele => {
+//     ele.viewer = new SquarePageViewer(ele, $("#panel"))
+// })
+
+// setInterval(() => {
+//     TetrisRule.rotate(squareGroup)
+// }, 1000)
+
+
+// setTimeout(() => {
+//     TetrisRule.moveDirection(squareGroup, MoveDirdection.down)
+// }, 2000)

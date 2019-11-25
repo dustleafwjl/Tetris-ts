@@ -26,7 +26,10 @@ export class SquarePageViewer implements IViewer {
         })
     }
     remove(): void {
-        this.isRemove = true
+        if(this.dom && !this.isRemove) {
+            this.dom.remove()
+            this.isRemove = true
+        }
     }
     constructor(
         private square: Square,
