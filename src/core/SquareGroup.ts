@@ -1,7 +1,7 @@
 import { Square } from "./Square";
 import { Shape, Point } from "./types";
 
-export class SquareGroup {
+export abstract class SquareGroup {
     private _squares: readonly Square[] = []
     protected isClock = true
     private setSquarePoints() {

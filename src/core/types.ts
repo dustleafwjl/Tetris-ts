@@ -1,4 +1,5 @@
 import { SquareGroup } from "./SquareGroup";
+import { Game } from "./Game";
 
 // 坐标
 export interface Point {
@@ -17,6 +18,15 @@ export interface IGameViewer {
      * @param tetris 切换的方块对象
      */
     swtich(tetris: SquareGroup): void
+    /**
+     * 游戏界面的初始化
+     * @param g 游戏对象
+     */
+    init(g: Game): void
+    showScore(score: number): void
+    onGamePause(): void
+    onGameStart(): void
+    onGameOver(): void
 }
 
 // 方块的显示

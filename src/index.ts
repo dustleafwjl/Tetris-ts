@@ -10,17 +10,5 @@ import { PageGameViewer } from './core/viewer/PageGameViewer'
 
 const g: Game = new Game(new PageGameViewer())
 
+
 g.start()
-// const squareGroup: SquareGroup = createTetris({x: 3, y: 3})
-// squareGroup.squares.forEach(ele => {
-//     ele.viewer = new SquarePageViewer(ele, $("#panel"))
-// })
-
-// setInterval(() => {
-//     TetrisRule.rotate(squareGroup)
-// }, 1000)
-
-
-// setTimeout(() => {
-//     TetrisRule.moveDirection(squareGroup, MoveDirdection.down)
-// }, 2000)

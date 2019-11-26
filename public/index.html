@@ -12,25 +12,69 @@
             margin: 0 auto;
         }
         #panel {
-            width: 300px;
-            height: 900px;
             position: relative;
             background-color: #000;
         }
         #tip {
-            padding-left: 100px;
+            padding-left: 60px;
         }
         #next {
-            width: 120px;
             position: relative;
+        }
+        .wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrap> div {
+            font-size: 14px;
+        }
+        #score {
+            /* width: 100%; */
+            text-align: center;
+            font-size: 1.5em;
+            color: #f30;
+        }
+        #msg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            width: 100%;
+            height: 100%;
+        }
+        #msg>p {
+            color: red;
+            z-index: 999;
+            padding: 10px;
+            background-color: #eee;
+            border: 4px solid #fff;
+            box-sizing: border-box;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
     <div id="root">
-        <div id="panel"></div>
+        <div id="panel">
+            <div id="msg">
+                <p>asdfsaf</p>
+            </div>
+        </div>
         <div id="tip">
             <div id="next"></div>
+            <div class="wrap">
+                <div>游戏得分：</div>
+                <div id="score"></div>
+            </div>
+            <div class="des">
+                <p>使用键盘进行游戏：</p>
+                <p>↑： 旋转</p>
+                <p>↓： 向下</p>
+                <p>←： 左</p>
+                <p>→： 右</p>
+                <p>空格： 暂停/恢复/开始</p>
+            </div>
         </div>
     </div>
 </body>
