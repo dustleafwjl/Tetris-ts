@@ -4,7 +4,7 @@
   "description": "A game was used webpack, jquery, typescript",
   "main": "index.js",
   "dependencies": {
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   },
